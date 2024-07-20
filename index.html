@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(235, 18%, 26%);
+      display: grid;
+      place-items: center;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3.5rem;
+      }
+    
+    .container1{
+      display: flex;
+      align-items: center;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 1rem;
+      padding: 1rem;
+      gap: 1em;
+      width: 46%;
+      }
+      .container2{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 3em;
+      }
+.input-border {
+      width: 1.1em;
+      height: 1.1em;
+      background-color: white;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 1px solid black;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.3s;
+    }
+
+    .input-border:checked {
+      background-color: hsl(4, 100%, 67%);
+    }
+*{
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+    .input-border:checked::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0.3em;
+      height: 0.5em;
+      border: solid white;
+      border-width: 0 0.2em 0.2em 0;
+      transform: translate(-50%, -60%) rotate(45deg);
+    }
+
+    .container3{
+      content-visibility:hidden;
+      visibility: hidden;
+    }
+    .container4 {
+      height: 25rem;
+     
+    }
+    .para{
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+    }
+    
+    .infont{
+      font-family: "Roboto", sans-serif;
+      font-weight: 400,700;
+    }
+    .container5{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 110%;
+      margin-bottom: .5em;
+    }
+    .container6{
+      display: flex;
+      flex-direction: column;
+      gap: .5em;
+      margin-top: 2rem;
+    }
+    .box{
+      height: 2rem;
+      width: 19.6rem;
+      border-radius: .4em;
+      border: 1px solid black;
+      
+    }
+    .box1{
+      height: 2.5rem;
+      width: 19.9rem;
+      border-radius:.4em;
+      background-color: hsl(234, 29%, 20%);
+      color: hsl(0, 0%, 100%);
+      margin-top: .85em;
+    }
+    .box1:hover{
+      background-color: hsl(4, 100%, 67%);
+      border: 1px solid hsl(4, 100%, 67%);
+    }
+    .suimg{
+      height: 3rem;
+    }
+    .container7{
+      height: 100%;
+      width: 40%;
+      
+      border-radius: 1.5rem;
+      background-color: hsl(0, 0%, 100%);
+      
+    }
+    .img{
+      background-image: url("assets/images/illustration-sign-up-desktop.svg");
+      height: 37rem;
+      width: 83.9rem;
+    }
+    .container8{
+      padding: 2rem;
+    }
+    .bold{
+      font-weight: bolder;
+    }
+    .show{
+      content-visibility: visible;
+      visibility: visible;
+    }
+    .container9{
+      display: flex;
+      justify-content: space-between;
+      }
+      .sub-contain{
+        color: hsl(4, 100%, 67%);
+      }
+      .error{
+        border:1px solid hsl(4, 100%, 67%);
+        background-color: hsl(6, 64%, 87%);
+        
+      }
+      @media (max-width:375px){
+        
+        body{
+          background-color: hsl(0, 0%, 100%)
+;
+          margin: 0px;
+          padding: 0px;
+          border: 0px;
+          
+
+        }
+        .container1{
+          display: flex;
+          flex-direction:column-reverse;
+          margin: 0px;
+        padding: 0px;
+        border: 0px;
+        width: 101%;
+        height: 100%;
+        gap: 3rem;
+        
+
+        }
+        .container2{
+          width: 35vh;
+          padding: 0px;
+         border: 0px;
+        
+         margin-bottom: 5rem;
+          
+        }
+        .container4{
+          height: 55%;
+          width: 45%;
+          border-radius:0px 0px 15px 15px;
+          padding: 0px;
+         border: 0px;
+         margin: 0px;
+         
+          
+        }
+        .img{
+          background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+          width: 23.4rem;
+          height: 17rem;
+          
+        }
+        .box{
+          height: 3.5rem;
+        }
+        .box1{
+          height: 3.5rem;
+        }
+        .container7{
+        height: 100%;
+        width: 100%;
+      }
+      .container8{
+        margin-top: 45%;
+        display: grid;
+      }
+     
+      #btn_1{
+          margin-top: 75%;
+      }
+      }
+      
+      
+  </style>
+
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<body>
+
+  <!-- Sign-up form start -->
+<div class="container1 ">
+<div class="container2">
+  <div><h1 class="infont"> Stay updated!</h1>
+  <p class="infont">  Join 60,000+ product managers receiving monthly updates on:
+</p>
+  </div>
+
+<div class="container5">
+  <div><input class="input-border infont" type="checkbox">Product discovery and building what matters
+</div>
+<div><input class="input-border infont" type="checkbox">Measuring to ensure updates are a success</div>
+<div><input class="input-border infont" type="checkbox">And much more!</div>
+</div>
+
+<div >
+  <form class="container6 ">
+  <div class="container9">
+    <label class="infont" id="email" >Email address</label>
+    <label class="sub-contain container3">Valide email required</label>
+  </div>
+    
+    
+  
+  <div>
+    <input class="box " id="value" type="email text" placeholder=" email@company.com" required>
+   
+  </div>
+ <div><button id="btn" class="box1 infont">Subscribe to monthly newsletter</button></div> 
+</form>
+</div>
+
+</div >
+  <div class="container4 img"> </div>
+  <!-- <img class="container4" src="./assets/images/illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop"> -->
+</div>
+ 
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+<div class="container3 container7">
+  <div class="container8">
+  <img class="suimg" src="./assets/images/icon-success.svg" alt="icon-success">  
+  <h1 class="infont">
+    Thanks for subscribing!
+  </h1>
+  <p class="para">A confirmation email has been sent to <span class="bold" id="new_mail">ash@loremcompany.com.</span>  
+  Please open it and click the button inside to confirm your subscription.
+</p>
+<button class="box1 infont " id="btn_1">
+    Dismiss message
+</button>
+
+ </div>
+</div>
+ 
+  <!-- Success message end -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sudharsan</a>.
+  </div>
+  <script>
+    function pop_up(){
+       document.getElementById("btn").addEventListener("click" , function(){
+        
+          document.querySelector(".container1").classList.add("container3");
+          document.querySelector(".container7").classList.add("show");
+          document.querySelector("#new_mail").innerHTML = user_email;
+        })
+    }
+   var user_email = "";
+    document.getElementById('value').addEventListener('input',function(){
+      var inputvalue =document.getElementById('value').value;
+      user_email = inputvalue;
+      
+      if (user_email.includes("@")){
+          if(user_email.includes(".com")){
+            console.log("yes");
+            document.querySelector(".sub-contain").classList.remove("show");
+            document.querySelector(".box").classList.remove("error");
+               // Assuming you have a button with the ID "myButton"
+            const button = document.getElementById("btn");
+
+button.addEventListener("click", (event) => {
+  // Prevent the default behavior (e.g., form submission or page refresh)
+  event.preventDefault();
+
+  // Your custom logic here
+  console.log("Button clicked, but page refresh prevented!");
+});
+           pop_up()
+
+          }
+      } 
+      else {
+        document.querySelector(".sub-contain").classList.add("show");
+          document.querySelector(".box").classList.add("error");
+        x
+      }
+
+      const reload = document.querySelector("#btn_1") ;
+      reload.addEventListener("click",function(){
+        location.reload();
+      })
+     })
+   
+  </script>
+</body>
+</html>
